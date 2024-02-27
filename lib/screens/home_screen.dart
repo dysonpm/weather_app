@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -22,13 +24,55 @@ class HomeScreen extends StatelessWidget {
           child: Stack(
             children: [
               Align(
-                alignment: AlignmentDirectional(3, -0.3),
+                alignment: AlignmentDirectional(0, -1.5),
                 child: Container(
                   height: 300,
-                  width: 300,
+                  width: 600,
                   decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                       color: const Color.fromARGB(255, 15, 85, 143)),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0, -0.50),
+                child: Container(
+                  height: 300,
+                  width: 600,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      color: Color.fromARGB(255, 12, 25, 172)),
+                ),
+              ),
+              BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 100.0, sigmaY: 100.0),
+                child: Container(
+                  decoration: BoxDecoration(color: Colors.transparent),
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "📍 Mülheim an der Ruhr",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Good Morning",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
               )
             ],
