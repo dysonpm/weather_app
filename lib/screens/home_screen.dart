@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -68,11 +69,12 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       "Good Morning",
                       style: TextStyle(
+                          fontFamily: "Google",
                           color: Colors.white,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
-                    Image.asset('assets/1.png'),
+                    Image.asset('assets/2.png'),
                     const Center(
                       child: Text(
                         '21°C',
@@ -98,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     const Center(
                       child: Text(
-                        'Friday 16  13.00 Uhr',
+                        'Friday 16 | 13.00 Uhr',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
@@ -112,7 +114,7 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        // Zeigt eine Zeile mit Sonnenaufgangsinformationen an.
+                        // Zeigt eine Zeile mit Informationen an.
                         Row(
                           children: [
                             Image.asset(
@@ -140,14 +142,14 @@ class HomeScreen extends StatelessWidget {
                                   "8.05 Uhr",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w700,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],
                             )
                           ],
                         ),
-                        // Zeigt eine Zeile mit Sonnenaufgangsinformationen an.
+                        // Zeigt eine Zeile mit Informationen an.
                         Row(
                           children: [
                             Image.asset(
@@ -174,7 +176,7 @@ class HomeScreen extends StatelessWidget {
                                   "18.12 Uhr",
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w700,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ],
@@ -189,6 +191,81 @@ class HomeScreen extends StatelessWidget {
                       child: Divider(
                         color: Colors.grey,
                       ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        // Zeigt eine Zeile mit Informationen an.
+                        // Die untere Häfte
+                        Row(
+                          children: [
+                            Image.asset(
+                              "assets/12.png",
+                              scale: 8,
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Temp Max",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 10,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  "12 °C",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                        // Zeigt eine Zeile mit Informationen an.
+                        Row(
+                          children: [
+                            Image.asset(
+                              "assets/13.png",
+                              scale: 8,
+                            ),
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Temp Min",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 10),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  "5 °C",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ],
                     ),
                   ],
                 ),
