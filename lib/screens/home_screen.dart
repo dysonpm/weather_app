@@ -112,6 +112,7 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        // Zeigt eine Zeile mit Sonnenaufgangsinformationen an.
                         Row(
                           children: [
                             Image.asset(
@@ -121,27 +122,74 @@ class HomeScreen extends StatelessWidget {
                             const SizedBox(
                               height: 5,
                             ),
-                            Text(
-                              "Sonnenaufgang",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700,
-                              ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Sonnenaufgang",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 10,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  "8.05 Uhr",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                        // Zeigt eine Zeile mit Sonnenaufgangsinformationen an.
+                        Row(
+                          children: [
+                            Image.asset(
+                              "assets/14.png",
+                              scale: 8,
                             ),
                             const SizedBox(
-                              height: 3,
+                              height: 5,
                             ),
-                            Text(
-                              "8.00 Uhr",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700,
-                              ),
-                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Sonnenuntergang",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 10),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  "18.12 Uhr",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            )
                           ],
-                        )
+                        ),
                       ],
-                    )
+                    ),
+                    // Linie (divider)
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5.0),
+                      child: Divider(
+                        color: Colors.grey,
+                      ),
+                    ),
                   ],
                 ),
               )
